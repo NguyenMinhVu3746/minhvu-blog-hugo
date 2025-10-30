@@ -57,3 +57,12 @@ theme = "tella"
     [markup.goldmark.renderer]
       # Cho phép HTML thô trong Markdown (để hiển thị Banner/Slider)
       unsafe = true
+# Cấu hình để Hugo KHÔNG xử lý các file ảnh tĩnh trong thư mục static
+[imaging]
+  resampleFilter = "Box"
+  quality = 75
+  anchor = "smart"
+  # Thêm các định dạng ảnh mà bạn có trong thư mục static/img/slide
+  [imaging.exif]
+    includeFields = ".*"
+    timeZone = "Local"

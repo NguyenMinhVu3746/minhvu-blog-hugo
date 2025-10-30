@@ -1,4 +1,4 @@
-baseURL = "/" # Đặt base URL là '/' để đảm bảo đường dẫn tài nguyên luôn bắt đầu từ thư mục gốc
+baseURL = "/" # Đặt base URL là '/' để đảm bảo đường dẫn tài nguyên luôn bắt đầu từ thư thư mục gốc
 languageCode = "vi"
 title = "Blog Code Cơ Bản của Nguyễn Minh Vũ"
 theme = "tella"
@@ -35,15 +35,16 @@ theme = "tella"
   title = "BLOG CODE CƠ BẢN CỦA NGUYỄN MINH VŨ"
   subtitle = "Chia sẻ kiến thức lập trình cơ bản và các dự án cá nhân."
   
-  # ⚠️ CẤU HÌNH SLIDER: Dữ liệu Slide được đặt trực tiếp trong TOML
-  # Đường dẫn tuyệt đối phải bắt đầu bằng /
+  # ⚠️ ĐIỀU CHỈNH ĐỂ TRỎ ĐẾN THƯ MỤC ASSETS MỚI:
   [[params.hero.slide]]
-    background_image = "/img/slide/minhvu-banner-1.jpg" 
+    # Đường dẫn trỏ đến file trong thư mục assets
+    background_image = "assets/img/slide/minhvu-banner-1.jpg" 
     cta_text = "Xem Bài Code Đầu Tiên"
     cta_link = "/code/bai-code-dau-tien"
     
   [[params.hero.slide]]
-    background_image = "/img/slide/minhvu-banner-2.jpg"
+    # Đường dẫn trỏ đến file trong thư mục assets
+    background_image = "assets/img/slide/minhvu-banner-2.jpg"
     cta_text = "Xem Dự Án"
     cta_link = "/projects"
 
@@ -71,7 +72,7 @@ theme = "tella"
   title = "Các Bài Viết Code Mới Nhất"
 
 # =========================================================
-# === CẤU HÌNH KHÁC (Đã sửa lỗi cú pháp và vị trí) =========
+# === CẤU HÌNH KHÁC =======================================
 # =========================================================
 
 # Cấu hình Markdown Renderer (Goldmark)
@@ -81,7 +82,7 @@ theme = "tella"
       # Cho phép HTML thô trong Markdown
       unsafe = true
 
-# Cấu hình để Hugo KHÔNG xử lý các file ảnh tĩnh trong thư mục static (imaging)
+# Cấu hình Imaging (để Hugo xử lý tài nguyên trong assets)
 [imaging]
   resampleFilter = "Box"
   quality = 75

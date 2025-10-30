@@ -27,9 +27,26 @@ theme = "tella"
 # === THAM SỐ CHUNG (PARAMS) & CẤU HÌNH TRANG CHỦ ===========
 # =========================================================
 [params]
-  # DÒNG CẤU HÌNH MỚI ĐỂ KÍCH HOẠT BANNER VÀ SERVICE BOXES TRÊN TRANG CHỦ
-  # Theme Tella sẽ tìm các sections này và hiển thị chúng theo thứ tự.
+  # DÒNG CẤU HÌNH NÀY SẼ KÍCH HOẠT BANNER VÀ SERVICE BOXES
   homepage_section = ["hero", "services", "blog"]
+
+# --- Cấu hình cho Banner lớn (Hero Section) ---
+[params.hero]
+  title = "BLOG CODE CƠ BẢN CỦA NGUYỄN MINH VŨ"
+  subtitle = "Chia sẻ kiến thức lập trình cơ bản và các dự án cá nhân."
+  
+  # ⚠️ CẤU HÌNH SLIDER: Dữ liệu Slide được đặt trực tiếp trong TOML
+  # Đường dẫn tuyệt đối phải bắt đầu bằng /
+  [[params.hero.slide]]
+    background_image = "/img/slide/minhvu-banner-1.jpg" 
+    cta_text = "Xem Bài Code Đầu Tiên"
+    cta_link = "/code/bai-code-dau-tien"
+    
+  [[params.hero.slide]]
+    background_image = "/img/slide/minhvu-banner-2.jpg"
+    cta_text = "Xem Dự Án"
+    cta_link = "/projects"
+
 
 # --- Cấu hình cho Service Boxes (Simple, Fast, GitHub) ---
 [[params.services]]
@@ -52,17 +69,24 @@ theme = "tella"
 # --- Cấu hình cho phần Blog Listing (Hiển thị các bài viết) ---
 [params.blog]
   title = "Các Bài Viết Code Mới Nhất"
-  [markup]
+
+# =========================================================
+# === CẤU HÌNH KHÁC (Đã sửa lỗi cú pháp và vị trí) =========
+# =========================================================
+
+# Cấu hình Markdown Renderer (Goldmark)
+[markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # Cho phép HTML thô trong Markdown (để hiển thị Banner/Slider)
+      # Cho phép HTML thô trong Markdown
       unsafe = true
-# Cấu hình để Hugo KHÔNG xử lý các file ảnh tĩnh trong thư mục static
+
+# Cấu hình để Hugo KHÔNG xử lý các file ảnh tĩnh trong thư mục static (imaging)
 [imaging]
   resampleFilter = "Box"
   quality = 75
   anchor = "smart"
-  # Thêm các định dạng ảnh mà bạn có trong thư mục static/img/slide
+  
   [imaging.exif]
     includeFields = ".*"
     timeZone = "Local"

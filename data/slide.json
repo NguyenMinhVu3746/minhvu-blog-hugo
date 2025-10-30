@@ -2,14 +2,14 @@
     {
         "title": "BLOG CODE CƠ BẢN CỦA NGUYỄN MINH VŨ",
         "subtitle": "Chia sẻ kiến thức lập trình cơ bản và các dự án cá nhân.",
-        "background_image": "img/slide/slide01.jpg", 
+        "background_image": "/img/slide/slide01.jpg", 
         "cta_text": "Xem Bài Code Đầu Tiên",
         "cta_link": "/code/bai-code-dau-tien"
     },
     {
         "title": "CÁC DỰ ÁN CỦA TÔI",
         "subtitle": "Xem danh sách các dự án đã thực hiện trên GitHub.",
-        "background_image": "img/slide/slide02.jpg", 
+        "background_image": "/img/slide/slide02.jpg", 
         "cta_text": "Xem Dự Án",
         "cta_link": "/projects"
     }

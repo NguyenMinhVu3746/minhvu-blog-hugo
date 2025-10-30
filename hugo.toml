@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "/" # Đặt base URL là '/' để đảm bảo đường dẫn tài nguyên luôn bắt đầu từ thư mục gốc
 languageCode = "vi"
 title = "Blog Code Cơ Bản của Nguyễn Minh Vũ"
 theme = "tella"

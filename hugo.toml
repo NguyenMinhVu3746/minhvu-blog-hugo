@@ -1,0 +1,59 @@
+baseURL = "http://example.org/"
+languageCode = "vi"
+title = "Blog Code Cơ Bản của Nguyễn Minh Vũ"
+theme = "tella"
+
+
+# =========================================================
+# === CẤU HÌNH MENU CHÍNH =================================
+# =========================================================
+[[menu.main]]
+  name = "Bài Code Cơ Bản"
+  url = "/code/" # Tương ứng với thư mục content/code
+  weight = 10
+
+[[menu.main]]
+  name = "Dự Án"
+  url = "/projects/" # Tương ứng với thư mục content/projects
+  weight = 20
+
+[[menu.main]]
+  name = "Về Tôi & CV"
+  url = "/about/" # Tương ứng với thư mục content/about
+  weight = 30
+
+
+# =========================================================
+# === THAM SỐ CHUNG (PARAMS) & CẤU HÌNH TRANG CHỦ ===========
+# =========================================================
+[params]
+  # DÒNG CẤU HÌNH MỚI ĐỂ KÍCH HOẠT BANNER VÀ SERVICE BOXES TRÊN TRANG CHỦ
+  # Theme Tella sẽ tìm các sections này và hiển thị chúng theo thứ tự.
+  homepage_section = ["hero", "services", "blog"]
+
+# --- Cấu hình cho Service Boxes (Simple, Fast, GitHub) ---
+[[params.services]]
+  icon = "fa-solid fa-code" # Biểu tượng code
+  title = "Code Cơ Bản"
+  description = "Tập trung vào kiến thức nền tảng HTML/CSS, Python, và Git."
+
+[[params.services]]
+  icon = "fa-solid fa-chalkboard" # Biểu tượng giảng dạy
+  title = "Học Tập Hiệu Quả"
+  description = "Các bài viết ngắn gọn, súc tích, dễ hiểu, giúp bạn học nhanh."
+
+[[params.services]]
+  icon = "fa-brands fa-github" # Biểu tượng GitHub
+  title = "Dự Án Thực Tế"
+  description = "Xem các dự án và mã nguồn trực tiếp trên GitHub của tôi."
+  # Link_url = "https://github.com/yourusername" # Hãy thay bằng link GitHub của bạn
+
+
+# --- Cấu hình cho phần Blog Listing (Hiển thị các bài viết) ---
+[params.blog]
+  title = "Các Bài Viết Code Mới Nhất"
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Cho phép HTML thô trong Markdown (để hiển thị Banner/Slider)
+      unsafe = true
